@@ -2,6 +2,25 @@
 
 
 
+## v1.1.5 (2024-03-14)
+
+### Build
+
+* build: Update ci-cd.yml location ([`de1202a`](https://github.com/MountainGod2/cb_events/commit/de1202abb78a3601ef03a059359b4eb2ec62a001))
+
+* build: Update pyproject.toml ([`9578b88`](https://github.com/MountainGod2/cb_events/commit/9578b889870eae8f15dfdca771a85d1744153808))
+
+### Documentation
+
+* docs: Update README.md ([`8dc1b63`](https://github.com/MountainGod2/cb_events/commit/8dc1b63e165388eb6a22ee2832d5ad23f1cca87c))
+
+* docs: Update README.md ([`360b3fb`](https://github.com/MountainGod2/cb_events/commit/360b3fba18536697f82e2daca8cbe9b43adf3600))
+
+### Fix
+
+* fix: Adjust message mapping strings ([`34f4439`](https://github.com/MountainGod2/cb_events/commit/34f4439d216a287ca64c688e776eb7a83e5c4df8))
+
+
 ## v1.1.4 (2024-03-14)
 
 ### Fix
