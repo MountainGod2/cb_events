@@ -30,9 +30,12 @@ class EventFormatter:
             "unfollow": f"{user} has unfollowed",
             "fanclubJoin": f"{user} joined the fan club",
             "chatMessage": f"{user} sent chat message: {message}",
-            "privateMessage": f"{self.object.get('message', {}).get('fromUser', '')} sent private message to {self.object.get('message', {}).get('toUser', '')}: {self.object.get('message', {}).get('message', '')}",  # noqa: E501
+            "privateMessage": (f"{self.object.get('message', {}).get('fromUser', '')}",
+                f" sent private message to {self.object.get('message', {}).get('toUser', '')}:"
+                f" {self.object.get('message', {}).get('message', '')}"),
             "tip": f"{user} sent {tokens} tokens {'anonymously ' if is_anon else ''}{tip_message}",
             "roomSubjectChange": f"Room Subject changed to {self.object.get('subject', '')}",
-            "mediaPurchase": f"{user} purchased {self.object.get('media', {}).get('type', '')} set: {self.object.get('media', {}).get('name', '')}",  # noqa: E501
+            "mediaPurchase": (f"{user} purchased {self.object.get('media', {}).get('type', '')}",
+                f" set: {self.object.get('media', {}).get('name', '')}"),
         }
         return message_mappings.get(self.method, "Unknown event")
