@@ -2,6 +2,21 @@
 
 
 
+## v1.1.6 (2024-03-14)
+
+### Build
+
+* build: Update ci-cd.yml ([`a1ca338`](https://github.com/MountainGod2/cb_events/commit/a1ca338269a2005ded3a44c0b7da50a918fa02ff))
+
+* build: Correct pypi package name ([`16cc7a5`](https://github.com/MountainGod2/cb_events/commit/16cc7a5e7961ead83f2e53ac49e31e4de0a8748b))
+
+* build: Add readme to pyproject.toml ([`9695462`](https://github.com/MountainGod2/cb_events/commit/969546273b6b06f1e2bb313e986f260ae2fd872f))
+
+### Fix
+
+* fix: Add tests and rename event.py to models.py ([`c4d4d4a`](https://github.com/MountainGod2/cb_events/commit/c4d4d4a8794e8813b44dbd0262fcb17ad289f4f7))
+
+
 ## v1.1.5 (2024-03-14)
 
 ### Build
