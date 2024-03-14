@@ -17,9 +17,9 @@ import aiohttp
 from aiolimiter import AsyncLimiter
 from typing_extensions import Self
 
-from cb_events.models import Event
 from cb_events.event_formatter import EventFormatter
 from cb_events.exceptions import BaseURLError, ChaturbateAPIError
+from cb_events.models import Event
 
 SERVER_ERROR = (501, 502, 521)
 
