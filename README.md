@@ -19,7 +19,7 @@ To fetch events from the Chaturbate API, you can use the fetch_events function p
 ```python
 import asyncio
 
-from cb_events.poller import CBAPIPoller
+from cb_events import CBAPIPoller
 
 
 async def main() -> None:
@@ -32,14 +32,14 @@ if __name__ == "__main__":
 
 ```
 
-> NOTE: Replace "https://eventsapi.chaturbate.com/events/YOUR_USERNAME/******************/" with the appropriate URL.
+> [!NOTE]
+> Replace "https://eventsapi.chaturbate.com/events/YOUR_USERNAME/******************/" with the appropriate URL.
 
-Alternatively, you can set an enviroment variable in a .env file, and run the program as a module.
+Alternatively, you can set an enviroment variable in an .env file, and run the program as a module.
 
 ```bash
-$ echo BASE_URL='"https://eventsapi.chaturbate.com/events/YOUR_USERNAME/******************"' >> ./.env
-
-$ python3 -m cb_events
+echo BASE_URL='"https://eventsapi.chaturbate.com/events/YOUR_USERNAME/******************"' >> ./.env
+python3 -m cb_events
 ```
 
 ## Contributing
