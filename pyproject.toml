@@ -31,6 +31,8 @@ version_toml = [
 branch = "main"                                       # branch to make releases of
 build_command = "pip install poetry && poetry build"  # build dists       
 
+[tool.semantic_release.remote.token]
+env = "GH_TOKEN"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
