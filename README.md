@@ -14,7 +14,9 @@ pip install cb-events
 
 ## Usage
 
-To fetch events from the Chaturbate API, you can use the fetch_events function provided by the package, this function supports an optional callback if you wish to perform your own logic when events are recieved. By default, it defaults to logging the events as formatted messages.
+To fetch events from the Chaturbate API, you can use the `fetch_events` function provided by the package.
+
+This function supports an optional callback if you wish to perform your own logic when events are recieved. By default, it defaults to logging the events as formatted messages.
 
 Here's an example of how to use it:
 
