@@ -10,9 +10,7 @@ jobs:
       uses: chartboost/ruff-action@v1
       with:
         src: "./src"
-        args: |
-          --fix
-          --config pyproject.toml
+        args: --fix --config "./pyproject.toml"
 
 
   ci:
