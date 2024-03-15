@@ -2,6 +2,23 @@
 
 
 
+## v1.1.7 (2024-03-15)
+
+### Build
+
+* build: Added pytest-cov ([`89ae39a`](https://github.com/MountainGod2/cb_events/commit/89ae39aa16d4ef7586212c00a8889b373a3a8940))
+
+* build: Update test documentation and added test coverage to ci-cd.yaml ([`19e0f0d`](https://github.com/MountainGod2/cb_events/commit/19e0f0d9780c1dcc86f5899af95be1dc12d5080f))
+
+### Fix
+
+* fix: Corrected message handling for tips ([`ff64c5d`](https://github.com/MountainGod2/cb_events/commit/ff64c5d257d1bbf91a8184395ef93bd02630d311))
+
+### Test
+
+* test: Updated testing framework ([`3112a5d`](https://github.com/MountainGod2/cb_events/commit/3112a5de4273d8a3a3f5dc76474ffb2b5506bca0))
+
+
 ## v1.1.6 (2024-03-14)
 
 ### Build
