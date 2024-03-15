@@ -2,6 +2,37 @@
 
 
 
+## v1.2.0 (2024-03-15)
+
+### Build
+
+* build: Removed config file from Ruff linter ([`fd466c7`](https://github.com/MountainGod2/cb_events/commit/fd466c74eb40da0c44e4244bdfd41673bbd594dc))
+
+* build: Update ruff linter ([`73e6178`](https://github.com/MountainGod2/cb_events/commit/73e61787a9554da90948b2a4ac79c64c0e7807ab))
+
+* build: Fix ruff configuration ([`3b3cfa5`](https://github.com/MountainGod2/cb_events/commit/3b3cfa50492e2845fdf5e08034b4bdb48faa9178))
+
+* build: Update Ruff linter ([`11b23ef`](https://github.com/MountainGod2/cb_events/commit/11b23ef3ce466ab0b79046078438773e60c346cb))
+
+* build: Update ruff linter settings ([`707ab54`](https://github.com/MountainGod2/cb_events/commit/707ab5402a5e3d5866ed20fed509276cce9e9ba4))
+
+* build: Update ci-cd.yml ([`3c3b1b6`](https://github.com/MountainGod2/cb_events/commit/3c3b1b6097a8ab71d124ae1090a9b347bb0fd0f0))
+
+* build: Add ruff linting to ci-cd.yml ([`6ef1bc5`](https://github.com/MountainGod2/cb_events/commit/6ef1bc546f72940342197a4342f05d7ca54b2b44))
+
+* build: Actually fixed coverage reports ([`a88ff39`](https://github.com/MountainGod2/cb_events/commit/a88ff39abd3b8e6ce4d6712a986a86f8a77eefa5))
+
+* build: Fix coverage job ([`e602f07`](https://github.com/MountainGod2/cb_events/commit/e602f07a26b3e0e8730ff83b5383aeea68d664b1))
+
+### Feature
+
+* feat: Update ruff linter and formater ([`b1ae116`](https://github.com/MountainGod2/cb_events/commit/b1ae1165831567b090f346e2aed0c7f0ce9d7278))
+
+### Test
+
+* test: Fix test formatting ([`86868d1`](https://github.com/MountainGod2/cb_events/commit/86868d1bf9c23e2086f2fe348b9fdf87bc846b96))
+
+
 ## v1.1.7 (2024-03-15)
 
 ### Build
