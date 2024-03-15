@@ -3,6 +3,20 @@ name: ci-cd
 on: [push, pull_request]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - run: pip install ruff
+    - run: | 
+        ruff check .
+        ruff fix .
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: 'Style fixes by Ruff'
+
+
   ci:
     # Set up operating system
     runs-on: ubuntu-latest
