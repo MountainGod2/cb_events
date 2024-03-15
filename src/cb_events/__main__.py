@@ -1,4 +1,5 @@
 """Run the event poller."""
+
 import asyncio
 import os
 
@@ -15,6 +16,7 @@ async def main() -> None:
 
     async with CBAPIPoller(url) as poller:
         await poller.fetch_events()
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -3,16 +3,6 @@ name: ci-cd
 on: [push, pull_request]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest 
-    steps:
-    - name: Lint files with Ruff
-      uses: chartboost/ruff-action@v1
-      with:
-        src: "./src"
-        args: --fix
-
-
   ci:
     # Set up operating system
     runs-on: ubuntu-latest
@@ -41,6 +31,12 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         slug: MountainGod2/cb_events
+
+    - name: Install ruff and format code
+      run: pip install ruff && ruff format
+
+    - name: Run ruff linter
+      run: ruff check --fix
 
 
   cd:

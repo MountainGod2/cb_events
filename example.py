@@ -8,5 +8,6 @@ async def main() -> None:  # noqa: D103
     async with CBAPIPoller(url) as poller:
         await poller.fetch_events(event_callback=log_events)
 
+
 if __name__ == "__main__":
     asyncio.run(main())

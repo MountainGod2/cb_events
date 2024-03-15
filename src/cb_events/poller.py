@@ -7,6 +7,7 @@ This module provides the following classes and functions:
 - EventFormatter: Formats Chaturbate events as messages.
 - log_events: Logs events.
 """
+
 from __future__ import annotations
 
 import asyncio
@@ -31,6 +32,7 @@ logging.basicConfig(
 
 SERVER_ERROR = {500, 502, 503, 504}  # Define the set of server error status codes
 
+
 class CBAPIPoller:
     """Poller for Chaturbate API."""
 
@@ -46,7 +48,6 @@ class CBAPIPoller:
         self.session: aiohttp.ClientSession = session or aiohttp.ClientSession()
         self.event_callback: Callable[[Any], None] | None = None
         self.max_backoff_delay: int = 60  # Maximum backoff delay (in seconds)
-
 
     async def __aenter__(self: Self) -> Self:
         """Enter the poller context."""
@@ -80,7 +81,9 @@ class CBAPIPoller:
             raise ChaturbateAPIError from e
 
     async def handle_response(
-        self, response: aiohttp.ClientResponse, backoff_delay: int,
+        self,
+        response: aiohttp.ClientResponse,
+        backoff_delay: int,
     ) -> None:
         """Handle the response."""
         if response.status == aiohttp.http.HTTPStatus.OK:
@@ -92,7 +95,8 @@ class CBAPIPoller:
             response.raise_for_status()
 
     async def handle_successful_response(
-        self, response: aiohttp.ClientResponse,
+        self,
+        response: aiohttp.ClientResponse,
     ) -> None:
         """Handle successful response."""
         json_response: dict[str, Any] = await response.json()
@@ -105,13 +109,17 @@ class CBAPIPoller:
             self.url = json_response["nextUrl"]
 
     async def handle_server_error(
-        self, response: aiohttp.ClientResponse, backoff_delay: int,
+        self,
+        response: aiohttp.ClientResponse,
+        backoff_delay: int,
     ) -> None:
         """Handle server errors."""
         backoff_delay *= 2
         backoff_delay = min(backoff_delay, self.max_backoff_delay)  # Limiting backoff delay
         logging.warning(
-            "Server error %s, retrying in %s seconds", response.status, backoff_delay,
+            "Server error %s, retrying in %s seconds",
+            response.status,
+            backoff_delay,
         )
         await asyncio.sleep(backoff_delay)
 
@@ -123,7 +131,8 @@ class CBAPIPoller:
             await log_events(event)
 
     async def fetch_events(
-        self, event_callback: Callable[[Any], None] | None = None,
+        self,
+        event_callback: Callable[[Any], None] | None = None,
     ) -> None:
         """Fetch events from the Chaturbate API."""
         self.event_callback = event_callback

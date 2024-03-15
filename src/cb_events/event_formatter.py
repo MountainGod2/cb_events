@@ -1,4 +1,5 @@
 """Format Chaturbate events as messages."""
+
 from __future__ import annotations
 
 from typing import Any

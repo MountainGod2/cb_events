@@ -1,4 +1,5 @@
 """Represents a Chaturbate event."""
+
 from __future__ import annotations
 
 from typing import Any
@@ -21,4 +22,3 @@ class Event:
             method_=event_dict.get("method"),
             object_=event_dict.get("object"),
         )
-

@@ -1,4 +1,5 @@
 """Tests for the CBAPIPoller class."""
+
 import asyncio
 import contextlib
 from unittest import IsolatedAsyncioTestCase
@@ -33,6 +34,7 @@ class TestCBAPIPoller(IsolatedAsyncioTestCase):
         async def async_context_manager_mock(*args, **kwargs) -> AsyncMock:  # noqa: ARG001, ANN003, ANN002
             """Return the mock response as an async context manager."""
             return mock_resp
+
         mock_get.return_value.__aenter__ = async_context_manager_mock
         mock_get.return_value.__aexit__ = AsyncMock()  # Ensure __aexit__ returns an awaitable
 
@@ -87,7 +89,7 @@ class TestCBAPIPoller(IsolatedAsyncioTestCase):
         self,
         mock_get: AsyncMock,  # noqa: ARG002
         mock_handle_successful_response: AsyncMock,
-        ) -> None:
+    ) -> None:
         """Test handling a successful response."""
         # Test handling a successful response directly
         mock_resp = MagicMock(spec=ClientResponse)
