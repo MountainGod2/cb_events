@@ -1,4 +1,3 @@
-
 """Represents a Chaturbate event."""
 from __future__ import annotations
 
