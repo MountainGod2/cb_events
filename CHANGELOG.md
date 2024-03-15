@@ -2,6 +2,23 @@
 
 
 
+## v1.3.0 (2024-03-15)
+
+### Build
+
+* build: Update ruff linter settings ([`ebe04f9`](https://github.com/MountainGod2/cb_events/commit/ebe04f9b41a840a03657967854b3d5d6b986e9cf))
+
+* build: Separate Ruff linting to separate task, and only run ci task if it succeeds ([`d9c913e`](https://github.com/MountainGod2/cb_events/commit/d9c913ef59f12f73ffdddf6c17c244e71b9df857))
+
+### Feature
+
+* feat: Raise exception if BASE_URL variable is not set when using program as a module ([`7658658`](https://github.com/MountainGod2/cb_events/commit/76586581c4b56d232fd675ad750dac8ce69b4d57))
+
+### Refactor
+
+* refactor: Update docstrings to match Google style ([`0b401a3`](https://github.com/MountainGod2/cb_events/commit/0b401a345d28833c2b837a604e4747735752ea55))
+
+
 ## v1.2.0 (2024-03-15)
 
 ### Build
