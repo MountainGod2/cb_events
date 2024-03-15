@@ -29,6 +29,8 @@ logging.basicConfig(
     datefmt="%d %b %Y %H:%M:%S",
 )
 
+SERVER_ERROR = {500, 502, 503, 504}  # Define the set of server error status codes
+
 class CBAPIPoller:
     """Poller for Chaturbate API."""
 
@@ -43,8 +45,10 @@ class CBAPIPoller:
         self.rate_limit: int = rate_limit
         self.session: aiohttp.ClientSession = session or aiohttp.ClientSession()
         self.event_callback: Callable[[Any], None] | None = None
+        self.max_backoff_delay: int = 60  # Maximum backoff delay (in seconds)
 
-    async def __aenter__(self) -> Self:
+
+    async def __aenter__(self: Self) -> Self:
         """Enter the poller context."""
         return self
 
@@ -81,6 +85,7 @@ class CBAPIPoller:
         """Handle the response."""
         if response.status == aiohttp.http.HTTPStatus.OK:
             await self.handle_successful_response(response)
+            backoff_delay = 1  # Reset backoff on success
         elif response.status in SERVER_ERROR:
             await self.handle_server_error(response, backoff_delay)
         else:
@@ -104,6 +109,7 @@ class CBAPIPoller:
     ) -> None:
         """Handle server errors."""
         backoff_delay *= 2
+        backoff_delay = min(backoff_delay, self.max_backoff_delay)  # Limiting backoff delay
         logging.warning(
             "Server error %s, retrying in %s seconds", response.status, backoff_delay,
         )

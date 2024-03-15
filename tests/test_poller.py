@@ -1,4 +1,4 @@
-"""Test cases for the CBAPIPoller class."""
+"""Tests for the CBAPIPoller class."""
 import asyncio
 import unittest
 from unittest.mock import AsyncMock, patch
@@ -9,11 +9,11 @@ from cb_events.models import Event
 from cb_events.poller import SERVER_ERROR, CBAPIPoller
 
 
-class TestCBAPIPoller(unittest.TestCase):
-    """Test cases for the CBAPIPoller class."""
+class TestCBAPIPoller(unittest.IsolatedAsyncioTestCase):
+    """Test the CBAPIPoller class."""
 
-    def setUp(self) -> None:
-        """Test cases setup."""
+    async def asyncSetUp(self) -> None:
+        """Set up test cases."""
         self.poller = CBAPIPoller(url="https://fakeurl.com/api")
         self.session_patch = patch("aiohttp.ClientSession", autospec=True)
         self.mock_session = self.session_patch.start()
