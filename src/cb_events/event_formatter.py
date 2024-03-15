@@ -6,16 +6,35 @@ from typing import Any
 
 
 class EventFormatter:
-    """Format Chaturbate events as messages."""
+    """Format Chaturbate events as messages.
+
+    Attributes:
+        id: The event ID.
+        method: The event method.
+        object: The event object.
+
+    """
 
     def __init__(self, event_id: str, method: str, obj: dict[str, Any]) -> None:
-        """Initialize the event formatter."""
+        """Initialize the event formatter.
+
+        Args:
+            event_id: The event ID.
+            method: The event method.
+            obj: The event object.
+
+        """
         self.id: str = event_id
         self.method: str = method
         self.object: dict[str, Any] = obj
 
     def format_as_message(self) -> str:
-        """Format the event as a message."""
+        """Format the event as a message.
+
+        Returns:
+            The formatted message.
+
+        """
         user = self.object.get("user", {}).get("username", "")
         message = self.object.get("message", {}).get("message", "")
         tokens = self.object.get("tip", {}).get("tokens", "")
