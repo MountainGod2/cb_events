@@ -4,7 +4,7 @@ Chaturbate Events is a Python package for fetching and processing events from th
 
 ## Installation
 
-You can install Chaturbate Events using pip (creating a virtual enviroment if needed):
+You can install Chaturbate Events using pip (creating a virtual environment if needed):
 
 ```bash
 python3 -m venv .venv
@@ -16,20 +16,22 @@ pip install cb-events
 
 To fetch events from the Chaturbate API, you can use the `fetch_events` function provided by the package.
 
-This function supports an optional callback if you wish to perform your own logic when events are recieved. By default, it defaults to logging the events as formatted messages.
+This function supports an optional callback if you wish to perform your logic when receiving events. By default, it defaults to logging the events as formatted messages.
 
 Here's an example of how to use it:
 
 ```python
 import asyncio
 
-from cb_events import CBAPIPoller
+from cb_events.poller import CBAPIPoller
 
 
 async def main() -> None:
     url = "https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY/"
+
     async with CBAPIPoller(url) as poller:
-        await poller.fetch_events(event_callback=log_events) # Supports optional callback, defaults to logging events
+        # Supports optional callback, defaults to logging events
+        await poller.fetch_events(event_callback=log_events)
 
 if __name__ == "__main__":
     asyncio.run(main())
@@ -39,7 +41,7 @@ if __name__ == "__main__":
 > [!NOTE]
 > Replace "https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY/" with your actual events API URL.
 
-Alternatively, you can set an enviroment variable in an .env file, and run the program as a module.
+Alternatively, you can set an environment variable in a .env file, and run the program as a module.
 
 ```bash
 echo BASE_URL='"https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY"' >> ./.env
