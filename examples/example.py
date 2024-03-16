@@ -1,4 +1,4 @@
-import asyncio  # noqa: D100
+import asyncio  # noqa: D100, INP001
 
 from cb_events import CBAPIPoller, log_events
 

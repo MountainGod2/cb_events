@@ -37,7 +37,6 @@ class CBAPIPoller:
     """Poller for Chaturbate API.
 
     Attributes:
-    ----------
         url: The URL of the Chaturbate API.
         rate_limit: The rate limit for the Chaturbate API.
         session: The aiohttp client session.
@@ -45,7 +44,6 @@ class CBAPIPoller:
         max_backoff_delay: The maximum backoff delay.
 
     Methods:
-    -------
         __init__: Initialize the poller.
         __aenter__: Enter the poller context.
         __aexit__: Exit the poller context.
