@@ -14,8 +14,8 @@ import os
 
 from dotenv import load_dotenv
 
-from cb_events import CBAPIPoller
 from cb_events.exceptions import BaseURLError
+from cb_events.poller import CBAPIPoller
 
 load_dotenv(override=True)
 

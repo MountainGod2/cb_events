@@ -29,7 +29,7 @@ from cb_events import CBAPIPoller
 async def main() -> None:
     url = "https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY/"
     async with CBAPIPoller(url) as poller:
-        await poller.fetch_events() # Supports optional callback, defaults to logging events
+        await poller.fetch_events(event_callback=log_events) # Supports optional callback, defaults to logging events
 
 if __name__ == "__main__":
     asyncio.run(main())

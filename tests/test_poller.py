@@ -7,7 +7,9 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 from aiohttp import ClientResponse, ClientSession
-from cb_events.poller import BaseURLError, CBAPIPoller, Event
+from cb_events.event_model import Event
+from cb_events.exceptions import BaseURLError
+from cb_events.poller import CBAPIPoller
 
 
 class TestCBAPIPoller(IsolatedAsyncioTestCase):

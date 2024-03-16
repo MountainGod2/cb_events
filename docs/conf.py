@@ -1,34 +1,36 @@
-# Configuration file for the Sphinx documentation builder.  # noqa: D100, INP001
+# Configuration file for the Sphinx documentation builder.
 #
-# For the full list of built-in configuration values, see the documentation:
+# This file only contains a selection of the most common options. For a full
+# list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "cb-events"
 copyright = "2024, MountainGod2"  # noqa: A001
 author = "MountainGod2"
-release = "v1.3.0"
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
-
-templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_static_path = ["_static"]
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
 extensions = [
     "myst_nb",
     "autoapi.extension",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
 ]
-autoapi_dirs = ["../src"]  # location to parse for API reference
+autoapi_dirs = ["../src"]
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+
+# -- Options for HTML output -------------------------------------------------
+
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+#
 html_theme = "sphinx_rtd_theme"

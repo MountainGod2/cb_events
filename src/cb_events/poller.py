@@ -117,8 +117,8 @@ class CBAPIPoller:
         limiter = AsyncLimiter(self.rate_limit)
         backoff_delay: int = 1  # Initial backoff delay
         if not self.url:
-            msg = "Please set the BASE_URL environment variable with the correct URL."
-            raise BaseURLError(msg)
+            error_msg = "Please set the BASE_URL environment variable with the correct URL."
+            raise BaseURLError(error_msg)
 
         logging.debug("Polling Chaturbate API at %s", self.url)
         try:
@@ -126,9 +126,9 @@ class CBAPIPoller:
                 async with limiter, self.session.get(self.url) as response:
                     await self.handle_response(response, backoff_delay)
                     backoff_delay = 1  # Reset backoff on success
-        except aiohttp.ClientError as e:
-            logging.exception("An error occurred during API polling")
-            raise ChaturbateAPIError from e
+        except aiohttp.ClientError as error:
+            error_msg = "An error occurred during API polling. Verify the URL and try again."
+            raise ChaturbateAPIError(error_msg) from error
 
     async def handle_response(
         self,

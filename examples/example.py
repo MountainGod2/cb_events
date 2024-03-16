@@ -1,6 +1,6 @@
 import asyncio  # noqa: D100, INP001
 
-from cb_events import CBAPIPoller, log_events
+from cb_events.poller import CBAPIPoller, log_events
 
 
 async def main() -> None:  # noqa: D103
