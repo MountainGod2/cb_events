@@ -2,6 +2,15 @@
 
 
 
+## v1.3.2 (2024-03-16)
+
+### Fix
+
+* fix: Update dependancies and docs ([`f261a76`](https://github.com/MountainGod2/cb_events/commit/f261a76d1ea23f791c240d4d6837b472d121ae8f))
+
+* fix: Update doc builder and requirements ([`fd3aa95`](https://github.com/MountainGod2/cb_events/commit/fd3aa952a3bf90c660d67e8554f3e897a2c4b2d5))
+
+
 ## v1.3.1 (2024-03-16)
 
 ### Build
