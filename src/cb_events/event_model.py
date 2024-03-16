@@ -1,4 +1,4 @@
-"""Represents a Chaturbate event."""
+"""This module contains the event model."""
 
 from __future__ import annotations
 

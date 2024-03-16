@@ -1,4 +1,4 @@
-"""Poller for Chaturbate API.
+"""Poller for the Chaturbate API.
 
 This module provides the following classes and functions:
 
@@ -19,18 +19,18 @@ from aiolimiter import AsyncLimiter
 from typing_extensions import Self
 
 from cb_events.event_formatter import EventFormatter
+from cb_events.event_model import Event
 from cb_events.exceptions import BaseURLError, ChaturbateAPIError
-from cb_events.models import Event
-
-SERVER_ERROR = (501, 502, 521)
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s: %(message)s",
     datefmt="%d %b %Y %H:%M:%S",
 )
+"""logging.basicConfig: Basic configuration for the logging system."""
 
-SERVER_ERROR = {500, 502, 503, 504}  # Define the set of server error status codes
+SERVER_ERROR = {500, 502, 503, 504}
+"""set: A set of server error status codes."""
 
 
 class CBAPIPoller:

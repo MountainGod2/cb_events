@@ -1,4 +1,13 @@
-"""Run the event poller."""
+"""The main module for the event poller.
+
+This module is the entry point for the event poller. It fetches events from the
+Chaturbate API and logs them to the console.
+
+Example:
+    The module can be run as follows::
+
+        $ python -m cb_events
+"""
 
 import asyncio
 import os
