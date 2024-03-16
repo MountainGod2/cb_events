@@ -2,6 +2,27 @@
 
 
 
+## v1.3.1 (2024-03-16)
+
+### Build
+
+* build: Update dependencies and merged linting to ci action ([`d431454`](https://github.com/MountainGod2/cb_events/commit/d431454bc79e3e04457ba354e32fbc4a7c35a374))
+
+### Documentation
+
+* docs: Update ruff settings for conf.py ([`7d8f100`](https://github.com/MountainGod2/cb_events/commit/7d8f100f7cfd0ed0a6bddf5170618118a943581e))
+
+* docs: Build docs ([`7f410ea`](https://github.com/MountainGod2/cb_events/commit/7f410ea985b7e41658616e8c5e8612116e974956))
+
+### Fix
+
+* fix: Update package structure and add CONTRIBUTING.md ([`f57de7e`](https://github.com/MountainGod2/cb_events/commit/f57de7e0d8dcf768d664bd108223b025a0803f42))
+
+### Refactor
+
+* refactor: update package structure and prepare doc directory ([`0ff5455`](https://github.com/MountainGod2/cb_events/commit/0ff5455e49866776e030bafd9891d56ae8c91ce4))
+
+
 ## v1.3.0 (2024-03-15)
 
 ### Build
