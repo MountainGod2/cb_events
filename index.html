@@ -81,7 +81,7 @@
 <p>Chaturbate Events is a Python package for fetching and processing events from the Chaturbate API.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
-<p>You can install Chaturbate Events using pip (creating a virtual enviroment if needed):</p>
+<p>You can install Chaturbate Events using pip (creating a virtual environment if needed):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 .<span class="w"> </span>.venv/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>cb-events
@@ -91,17 +91,19 @@ pip<span class="w"> </span>install<span class="w"> </span>cb-events
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
 <p>To fetch events from the Chaturbate API, you can use the <code class="docutils literal notranslate"><span class="pre">fetch_events</span></code> function provided by the package.</p>
-<p>This function supports an optional callback if you wish to perform your own logic when events are recieved. By default, it defaults to logging the events as formatted messages.</p>
+<p>This function supports an optional callback if you wish to perform your logic when receiving events. By default, it defaults to logging the events as formatted messages.</p>
 <p>Here’s an example of how to use it:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
-<span class="kn">from</span> <span class="nn">cb_events</span> <span class="kn">import</span> <span class="n">CBAPIPoller</span>
+<span class="kn">from</span> <span class="nn">cb_events.poller</span> <span class="kn">import</span> <span class="n">CBAPIPoller</span>
 
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY/&quot;</span>
+
     <span class="k">async</span> <span class="k">with</span> <span class="n">CBAPIPoller</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">poller</span><span class="p">:</span>
-        <span class="k">await</span> <span class="n">poller</span><span class="o">.</span><span class="n">fetch_events</span><span class="p">(</span><span class="n">event_callback</span><span class="o">=</span><span class="n">log_events</span><span class="p">)</span> <span class="c1"># Supports optional callback, defaults to logging events</span>
+        <span class="c1"># Supports optional callback, defaults to logging events</span>
+        <span class="k">await</span> <span class="n">poller</span><span class="o">.</span><span class="n">fetch_events</span><span class="p">(</span><span class="n">event_callback</span><span class="o">=</span><span class="n">log_events</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
@@ -112,7 +114,7 @@ pip<span class="w"> </span>install<span class="w"> </span>cb-events
 <div><p>[!NOTE]
 Replace “https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY/” with your actual events API URL.</p>
 </div></blockquote>
-<p>Alternatively, you can set an enviroment variable in an .env file, and run the program as a module.</p>
+<p>Alternatively, you can set an environment variable in a .env file, and run the program as a module.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">BASE_URL</span><span class="o">=</span><span class="s1">&#39;&quot;https://eventsapi.chaturbate.com/events/USER_NAME/API_KEY&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>./.env
 python3<span class="w"> </span>-m<span class="w"> </span>cb_events
 </pre></div>
