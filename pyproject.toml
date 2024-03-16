@@ -25,6 +25,7 @@ myst-nb = {version = "^1.0.0", python = "^3.9"}
 sphinx-autoapi = "^3.0.0"
 sphinx-rtd-theme = "^2.0.0"
 ruff = "^0.3.3"
+myst-parser = "^2.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
