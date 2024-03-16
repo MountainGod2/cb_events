@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHANGELOG &mdash; cb-events  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Example usage" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            cb-events
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CHANGELOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v1-3-2-2024-03-16">v1.3.2 (2024-03-16)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fix">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-3-1-2024-03-16">v1.3.1 (2024-03-16)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refactor">Refactor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-3-0-2024-03-15">v1.3.0 (2024-03-15)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature">Feature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Refactor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-2-0-2024-03-15">v1.2.0 (2024-03-15)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Feature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test">Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-7-2024-03-15">v1.1.7 (2024-03-15)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-6-2024-03-14">v1.1.6 (2024-03-14)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-5-2024-03-14">v1.1.5 (2024-03-14)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-4-2024-03-14">v1.1.4 (2024-03-14)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Fix</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-3-2024-03-14">v1.1.3 (2024-03-14)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Refactor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unknown">Unknown</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cb-events</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CHANGELOG</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/changelog.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changelog">
+<h1>CHANGELOG<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+<section id="v1-3-2-2024-03-16">
+<h2>v1.3.2 (2024-03-16)<a class="headerlink" href="#v1-3-2-2024-03-16" title="Link to this heading"></a></h2>
+<section id="fix">
+<h3>Fix<a class="headerlink" href="#fix" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Update dependancies and docs (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/f261a76d1ea23f791c240d4d6837b472d121ae8f"><code class="docutils literal notranslate"><span class="pre">f261a76</span></code></a>)</p></li>
+<li><p>fix: Update doc builder and requirements (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/fd3aa952a3bf90c660d67e8554f3e897a2c4b2d5"><code class="docutils literal notranslate"><span class="pre">fd3aa95</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-3-1-2024-03-16">
+<h2>v1.3.1 (2024-03-16)<a class="headerlink" href="#v1-3-1-2024-03-16" title="Link to this heading"></a></h2>
+<section id="build">
+<h3>Build<a class="headerlink" href="#build" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Update dependencies and merged linting to ci action (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/d431454bc79e3e04457ba354e32fbc4a7c35a374"><code class="docutils literal notranslate"><span class="pre">d431454</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>docs: Update ruff settings for conf.py (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/7d8f100f7cfd0ed0a6bddf5170618118a943581e"><code class="docutils literal notranslate"><span class="pre">7d8f100</span></code></a>)</p></li>
+<li><p>docs: Build docs (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/7f410ea985b7e41658616e8c5e8612116e974956"><code class="docutils literal notranslate"><span class="pre">7f410ea</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Fix<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Update package structure and add CONTRIBUTING.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/f57de7e0d8dcf768d664bd108223b025a0803f42"><code class="docutils literal notranslate"><span class="pre">f57de7e</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="refactor">
+<h3>Refactor<a class="headerlink" href="#refactor" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>refactor: update package structure and prepare doc directory (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/0ff5455e49866776e030bafd9891d56ae8c91ce4"><code class="docutils literal notranslate"><span class="pre">0ff5455</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-3-0-2024-03-15">
+<h2>v1.3.0 (2024-03-15)<a class="headerlink" href="#v1-3-0-2024-03-15" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Build<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Update ruff linter settings (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/ebe04f9b41a840a03657967854b3d5d6b986e9cf"><code class="docutils literal notranslate"><span class="pre">ebe04f9</span></code></a>)</p></li>
+<li><p>build: Separate Ruff linting to separate task, and only run ci task if it succeeds (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/d9c913ef59f12f73ffdddf6c17c244e71b9df857"><code class="docutils literal notranslate"><span class="pre">d9c913e</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="feature">
+<h3>Feature<a class="headerlink" href="#feature" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>feat: Raise exception if BASE_URL variable is not set when using program as a module (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/76586581c4b56d232fd675ad750dac8ce69b4d57"><code class="docutils literal notranslate"><span class="pre">7658658</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Refactor<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>refactor: Update docstrings to match Google style (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/0b401a345d28833c2b837a604e4747735752ea55"><code class="docutils literal notranslate"><span class="pre">0b401a3</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-2-0-2024-03-15">
+<h2>v1.2.0 (2024-03-15)<a class="headerlink" href="#v1-2-0-2024-03-15" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Build<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Removed config file from Ruff linter (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/fd466c74eb40da0c44e4244bdfd41673bbd594dc"><code class="docutils literal notranslate"><span class="pre">fd466c7</span></code></a>)</p></li>
+<li><p>build: Update ruff linter (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/73e61787a9554da90948b2a4ac79c64c0e7807ab"><code class="docutils literal notranslate"><span class="pre">73e6178</span></code></a>)</p></li>
+<li><p>build: Fix ruff configuration (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/3b3cfa50492e2845fdf5e08034b4bdb48faa9178"><code class="docutils literal notranslate"><span class="pre">3b3cfa5</span></code></a>)</p></li>
+<li><p>build: Update Ruff linter (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/11b23ef3ce466ab0b79046078438773e60c346cb"><code class="docutils literal notranslate"><span class="pre">11b23ef</span></code></a>)</p></li>
+<li><p>build: Update ruff linter settings (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/707ab5402a5e3d5866ed20fed509276cce9e9ba4"><code class="docutils literal notranslate"><span class="pre">707ab54</span></code></a>)</p></li>
+<li><p>build: Update ci-cd.yml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/3c3b1b6097a8ab71d124ae1090a9b347bb0fd0f0"><code class="docutils literal notranslate"><span class="pre">3c3b1b6</span></code></a>)</p></li>
+<li><p>build: Add ruff linting to ci-cd.yml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/6ef1bc546f72940342197a4342f05d7ca54b2b44"><code class="docutils literal notranslate"><span class="pre">6ef1bc5</span></code></a>)</p></li>
+<li><p>build: Actually fixed coverage reports (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/a88ff39abd3b8e6ce4d6712a986a86f8a77eefa5"><code class="docutils literal notranslate"><span class="pre">a88ff39</span></code></a>)</p></li>
+<li><p>build: Fix coverage job (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/e602f07a26b3e0e8730ff83b5383aeea68d664b1"><code class="docutils literal notranslate"><span class="pre">e602f07</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Feature<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>feat: Update ruff linter and formater (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/b1ae1165831567b090f346e2aed0c7f0ce9d7278"><code class="docutils literal notranslate"><span class="pre">b1ae116</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="test">
+<h3>Test<a class="headerlink" href="#test" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>test: Fix test formatting (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/86868d1bf9c23e2086f2fe348b9fdf87bc846b96"><code class="docutils literal notranslate"><span class="pre">86868d1</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-7-2024-03-15">
+<h2>v1.1.7 (2024-03-15)<a class="headerlink" href="#v1-1-7-2024-03-15" title="Link to this heading"></a></h2>
+<section id="id6">
+<h3>Build<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Added pytest-cov (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/89ae39aa16d4ef7586212c00a8889b373a3a8940"><code class="docutils literal notranslate"><span class="pre">89ae39a</span></code></a>)</p></li>
+<li><p>build: Update test documentation and added test coverage to ci-cd.yaml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/19e0f0d9780c1dcc86f5899af95be1dc12d5080f"><code class="docutils literal notranslate"><span class="pre">19e0f0d</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Fix<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Corrected message handling for tips (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/ff64c5d257d1bbf91a8184395ef93bd02630d311"><code class="docutils literal notranslate"><span class="pre">ff64c5d</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Test<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>test: Updated testing framework (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/3112a5de4273d8a3a3f5dc76474ffb2b5506bca0"><code class="docutils literal notranslate"><span class="pre">3112a5d</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-6-2024-03-14">
+<h2>v1.1.6 (2024-03-14)<a class="headerlink" href="#v1-1-6-2024-03-14" title="Link to this heading"></a></h2>
+<section id="id9">
+<h3>Build<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Update ci-cd.yml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/a1ca338269a2005ded3a44c0b7da50a918fa02ff"><code class="docutils literal notranslate"><span class="pre">a1ca338</span></code></a>)</p></li>
+<li><p>build: Correct pypi package name (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/16cc7a5e7961ead83f2e53ac49e31e4de0a8748b"><code class="docutils literal notranslate"><span class="pre">16cc7a5</span></code></a>)</p></li>
+<li><p>build: Add readme to pyproject.toml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/969546273b6b06f1e2bb313e986f260ae2fd872f"><code class="docutils literal notranslate"><span class="pre">9695462</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Fix<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Add tests and rename event.py to models.py (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/c4d4d4a8794e8813b44dbd0262fcb17ad289f4f7"><code class="docutils literal notranslate"><span class="pre">c4d4d4a</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-5-2024-03-14">
+<h2>v1.1.5 (2024-03-14)<a class="headerlink" href="#v1-1-5-2024-03-14" title="Link to this heading"></a></h2>
+<section id="id11">
+<h3>Build<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>build: Update ci-cd.yml location (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/de1202abb78a3601ef03a059359b4eb2ec62a001"><code class="docutils literal notranslate"><span class="pre">de1202a</span></code></a>)</p></li>
+<li><p>build: Update pyproject.toml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/9578b889870eae8f15dfdca771a85d1744153808"><code class="docutils literal notranslate"><span class="pre">9578b88</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Documentation<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>docs: Update README.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/8dc1b63e165388eb6a22ee2832d5ad23f1cca87c"><code class="docutils literal notranslate"><span class="pre">8dc1b63</span></code></a>)</p></li>
+<li><p>docs: Update README.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/360b3fba18536697f82e2daca8cbe9b43adf3600"><code class="docutils literal notranslate"><span class="pre">360b3fb</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Fix<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Adjust message mapping strings (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/34f4439d216a287ca64c688e776eb7a83e5c4df8"><code class="docutils literal notranslate"><span class="pre">34f4439</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-4-2024-03-14">
+<h2>v1.1.4 (2024-03-14)<a class="headerlink" href="#v1-1-4-2024-03-14" title="Link to this heading"></a></h2>
+<section id="id14">
+<h3>Fix<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>fix: Removed doc builder from semantic_release tool (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/929dce3c6b35e1968704dc8fb5ce24b5dd6c45be"><code class="docutils literal notranslate"><span class="pre">929dce3</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-3-2024-03-14">
+<h2>v1.1.3 (2024-03-14)<a class="headerlink" href="#v1-1-3-2024-03-14" title="Link to this heading"></a></h2>
+<section id="id15">
+<h3>Refactor<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>refactor: Add src path and create ci-cd.yml (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/bfb16ecf83991f2e40588a73b44fe83ec707f38b"><code class="docutils literal notranslate"><span class="pre">bfb16ec</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="unknown">
+<h3>Unknown<a class="headerlink" href="#unknown" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Update README.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/15bea58830e759868a96d07d1a97c2d571965ef6"><code class="docutils literal notranslate"><span class="pre">15bea58</span></code></a>)</p></li>
+<li><p>Update README.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/a3cab3372c58d7c71f7f138c2a802604663d38e2"><code class="docutils literal notranslate"><span class="pre">a3cab33</span></code></a>)</p></li>
+<li><p>Update README.md (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/415c59c2f5e4ee033622d2690724d0bc0d82d4c2"><code class="docutils literal notranslate"><span class="pre">415c59c</span></code></a>)</p></li>
+<li><p>first commit (<a class="reference external" href="https://github.com/MountainGod2/cb_events/commit/659609fc29eaf23f1da29af44cb0d283067144a7"><code class="docutils literal notranslate"><span class="pre">659609f</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example.html" class="btn btn-neutral float-left" title="Example usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, MountainGod2.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

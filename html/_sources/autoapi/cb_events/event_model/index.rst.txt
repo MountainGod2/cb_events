@@ -1,0 +1,52 @@
+:py:mod:`cb_events.event_model`
+===============================
+
+.. py:module:: cb_events.event_model
+
+.. autoapi-nested-parse::
+
+   This module contains the event model.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.event_model.Event
+
+
+
+
+.. py:class:: Event(id_: str, method_: str, object_: dict[str, Any])
+
+
+   Represents a Chaturbate event.
+
+   .. attribute:: id
+
+      The event ID.
+
+   .. attribute:: method
+
+      The event method.
+
+   .. attribute:: object
+
+      The event object.
+
+   .. py:method:: from_dict(event_dict: dict[str, Any]) -> Event
+      :classmethod:
+
+      Create an event from a dictionary.
+
+      :param event_dict: The event dictionary.
+
+      :returns: The event.
+
+
+

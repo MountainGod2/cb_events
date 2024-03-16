@@ -1,0 +1,49 @@
+:py:mod:`cb_events.event_formatter`
+===================================
+
+.. py:module:: cb_events.event_formatter
+
+.. autoapi-nested-parse::
+
+   Format Chaturbate events as messages.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.event_formatter.EventFormatter
+
+
+
+
+.. py:class:: EventFormatter(event_id: str, method: str, obj: dict[str, Any])
+
+
+   Format Chaturbate events as messages.
+
+   .. attribute:: id
+
+      The event ID.
+
+   .. attribute:: method
+
+      The event method.
+
+   .. attribute:: object
+
+      The event object.
+
+   .. py:method:: format_as_message() -> str
+
+      Format the event as a message.
+
+      :returns: The formatted message.
+
+
+

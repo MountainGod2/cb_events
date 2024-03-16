@@ -1,0 +1,31 @@
+:py:mod:`cb_events`
+===================
+
+.. py:module:: cb_events
+
+.. autoapi-nested-parse::
+
+   Package for Chaturbate API polling and event handling.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   __main__/index.rst
+   event_formatter/index.rst
+   event_model/index.rst
+   exceptions/index.rst
+   poller/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
+   
+

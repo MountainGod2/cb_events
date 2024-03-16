@@ -1,0 +1,39 @@
+:py:mod:`cb_events.__main__`
+============================
+
+.. py:module:: cb_events.__main__
+
+.. autoapi-nested-parse::
+
+   The main module for the event poller.
+
+   This module is the entry point for the event poller. It fetches events from the
+   Chaturbate API and logs them to the console.
+
+   .. rubric:: Example
+
+   The module can be run as follows::
+
+       $ python -m cb_events
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.__main__.main
+
+
+
+.. py:function:: main() -> None
+   :async:
+
+   Run the event poller.
+
+

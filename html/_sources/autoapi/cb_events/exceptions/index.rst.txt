@@ -1,0 +1,38 @@
+:py:mod:`cb_events.exceptions`
+==============================
+
+.. py:module:: cb_events.exceptions
+
+.. autoapi-nested-parse::
+
+   Exceptions for the cb_events package.
+
+
+
+Module Contents
+---------------
+
+.. py:exception:: ChaturbateAPIError
+
+
+   Bases: :py:obj:`Exception`
+
+   Exception raised for errors in the Chaturbate API.
+
+   .. attribute:: message -- explanation of the error
+
+      
+
+
+.. py:exception:: BaseURLError
+
+
+   Bases: :py:obj:`Exception`
+
+   Raise exception when BASE_URL is missing or incorrect.
+
+   .. attribute:: message -- explanation of the error
+
+      
+
+

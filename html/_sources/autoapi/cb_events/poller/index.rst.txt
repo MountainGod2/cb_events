@@ -1,0 +1,210 @@
+:py:mod:`cb_events.poller`
+==========================
+
+.. py:module:: cb_events.poller
+
+.. autoapi-nested-parse::
+
+   Poller for the Chaturbate API.
+
+   This module provides the following classes and functions:
+
+   - CBAPIPoller: Poller for the Chaturbate API.
+   - Event: Represents a Chaturbate event.
+   - EventFormatter: Formats Chaturbate events as messages.
+   - log_events: Logs events.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.poller.CBAPIPoller
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.poller.log_events
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   cb_events.poller.SERVER_ERROR
+
+
+.. py:data:: SERVER_ERROR
+
+   A set of server error status codes.
+
+   :type: set
+
+.. py:class:: CBAPIPoller(url: str | None = None, rate_limit: int = 2000, session: aiohttp.ClientSession | None = None)
+
+
+   Poller for Chaturbate API.
+
+   .. attribute:: url
+
+      The URL of the Chaturbate API.
+
+   .. attribute:: rate_limit
+
+      The rate limit for the Chaturbate API.
+
+   .. attribute:: session
+
+      The aiohttp client session.
+
+   .. attribute:: event_callback
+
+      The callback function for processing events.
+
+   .. attribute:: max_backoff_delay
+
+      The maximum backoff delay.
+
+   .. method:: __init__
+
+      Initialize the poller.
+
+   .. method:: __aenter__
+
+      Enter the poller context.
+
+   .. method:: __aexit__
+
+      Exit the poller context.
+
+   .. method:: close
+
+      Close the session.
+
+   .. method:: poll_cb_api
+
+      Poll the Chaturbate API.
+
+   .. method:: handle_response
+
+      Handle the response.
+
+   .. method:: handle_successful_response
+
+      Handle successful response.
+
+   .. method:: handle_server_error
+
+      Handle server errors.
+
+   .. method:: process_event
+
+      Process the event.
+
+   .. method:: fetch_events
+
+      Fetch events from the Chaturbate API.
+
+   .. method:: log_events
+
+      Log events.
+      
+      
+
+   .. py:method:: __aenter__() -> typing_extensions.Self
+      :async:
+
+      Enter the poller context.
+
+      :returns: The poller.
+
+
+   .. py:method:: __aexit__(*args: object) -> None
+      :async:
+
+      Exit the poller context.
+
+      :param \*args: Variable length argument list.
+
+
+   .. py:method:: close() -> None
+      :async:
+
+      Close the session.
+
+      :raises ChaturbateAPIError: An error occurred during API polling.
+
+
+   .. py:method:: poll_cb_api() -> None
+      :async:
+
+      Poll the Chaturbate API.
+
+      :raises BaseURLError: The BASE_URL environment variable is not set.
+      :raises ChaturbateAPIError: An error occurred during API polling.
+
+
+   .. py:method:: handle_response(response: aiohttp.ClientResponse, backoff_delay: int) -> None
+      :async:
+
+      Handle the response.
+
+      :param response: The response from the Chaturbate API.
+      :param backoff_delay: The backoff delay.
+
+      :raises aiohttp.ClientResponseError: An error occurred during the response.
+
+
+   .. py:method:: handle_successful_response(response: aiohttp.ClientResponse) -> None
+      :async:
+
+      Handle successful response.
+
+      :param response: The response from the Chaturbate API.
+
+
+   .. py:method:: handle_server_error(response: aiohttp.ClientResponse, backoff_delay: int) -> None
+      :async:
+
+      Handle server errors.
+
+      :param response: The response from the Chaturbate API.
+      :param backoff_delay: The backoff delay.
+
+
+   .. py:method:: process_event(event: cb_events.event_model.Event) -> None
+      :async:
+
+      Process the event.
+
+      :param event: The event from the Chaturbate API.
+
+
+   .. py:method:: fetch_events(event_callback: Callable[[Any], None] | None = None) -> None
+      :async:
+
+      Fetch events from the Chaturbate API.
+
+      :param event_callback: The callback function for processing events.
+
+
+
+.. py:function:: log_events(event: cb_events.event_model.Event) -> None
+   :async:
+
+   Log events.
+
+   :param event: The event from the Chaturbate API.
+
+
