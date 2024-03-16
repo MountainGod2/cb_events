@@ -2,6 +2,23 @@
 
 
 
+## v1.3.3 (2024-03-16)
+
+### Build
+
+* build: Update ci-cd.yml and requirements.txt ([`72dac63`](https://github.com/MountainGod2/cb_events/commit/72dac6370b574d4ec209f09874bf18a5b4227a53))
+
+### Documentation
+
+* docs: Update jupyter example to use existing coroutine ([`124aaf2`](https://github.com/MountainGod2/cb_events/commit/124aaf2095c2074b36bbc539f6ffccdce06932f2))
+
+* docs: Update docs path in ci-cd.yml ([`58319b3`](https://github.com/MountainGod2/cb_events/commit/58319b33d3e6c7015e81d843b5b4f7eeef1e37b5))
+
+### Fix
+
+* fix: Update example.py and index.md ([`708970e`](https://github.com/MountainGod2/cb_events/commit/708970e7ca6e48577d204a6d715060c72caf0b57))
+
+
 ## v1.3.2 (2024-03-16)
 
 ### Fix

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cb-events"
-version = "1.3.2"
+version = "1.3.3"
 description = "A Python package for fetching and processing events from the Chaturbate API"
 authors = ["MountainGod2 <admin@reid.ca>"]
 readme = "README.md"
