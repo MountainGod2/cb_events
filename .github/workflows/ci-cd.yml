@@ -4,27 +4,7 @@ on:
   - push
   - pull_request
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Check-out repository
-        uses: actions/checkout@v2
-      - name: Install poetry
-        uses: snok/install-poetry@v1
-      - name: Install package
-        run: poetry install
-      - name: Install ruff
-        run: pip install ruff
-      - name: Format code with ruff
-        run: ruff format
-      - name: Run ruff linter
-        run: ruff check --fix
   ci:
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.9
@@ -37,6 +17,10 @@ jobs:
         uses: snok/install-poetry@v1
       - name: Install package
         run: poetry install
+      - name: Format code with ruff
+        run: poetry run ruff format
+      - name: Run ruff linter
+        run: poetry run ruff check --fix
       - name: Test with pytest
         run: poetry run pytest tests/ --cov=cb_events --cov-report=xml
       - name: Upload coverage reports to Codecov
@@ -44,6 +28,8 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: MountainGod2/cb_events
+      - name: Build documentation
+        run: poetry run make html --directory docs/
   cd:
     permissions:
       id-token: write
