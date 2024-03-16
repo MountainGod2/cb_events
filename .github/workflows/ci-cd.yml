@@ -30,14 +30,11 @@ jobs:
           slug: MountainGod2/cb_events
       - name: Build documentation
         run: poetry run make html --directory docs/
-      - name: Deploy to GitHub Pages
+      - name: Upload documentation to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
-          publish_branch: gh-pages
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: docs/_build/
-          force_orphan: true
+          publish_dir: docs/_build/html
   cd:
     permissions:
       id-token: write
